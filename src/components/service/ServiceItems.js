@@ -4,61 +4,20 @@ import { useContext } from "react";
 const services = [
   {
     id: 1,
-    name: "Web Design",
+    name: "Full Stack Web Development",
     text: [
-      "Tokyo is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
-      "In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.",
-      "That’s why more companies are not only reevaluating their website’s design but also partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
+      "FullStack web development refers to the practice of developing both the front end (client-side) and back end (server-side) portions of a web application. A FullStack developer is proficient in working with the complete stack of technologies required to build a complete web application from start to finish. This includes everything from the user interface to the server logic and database management.",
+      "Frontend Development: \n\nVuejs, and React Native",
+      "Backend Development: \n\nNodejs, Golang",
     ],
     image: "assets/img/news/1.jpg",
   },
   {
     id: 2,
-    name: "Content Writing",
+    name: "Mobile Apps",
     text: [
-      "Tokyo is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
-      "In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.",
-      "That’s why more companies are not only reevaluating their website’s design but also partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
-    ],
-    image: "assets/img/news/2.jpg",
-  },
-  {
-    id: 3,
-    name: "Brand Identity",
-    text: [
-      "Tokyo is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
-      "In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.",
-      "That’s why more companies are not only reevaluating their website’s design but also partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
-    ],
-    image: "assets/img/news/3.jpg",
-  },
-  {
-    id: 4,
-    name: "Live Chat",
-    text: [
-      "Tokyo is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
-      "In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.",
-      "That’s why more companies are not only reevaluating their website’s design but also partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
-    ],
-    image: "assets/img/news/4.jpg",
-  },
-  {
-    id: 5,
-    name: "After Effects",
-    text: [
-      "Tokyo is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
-      "In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.",
-      "That’s why more companies are not only reevaluating their website’s design but also partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
-    ],
-    image: "assets/img/news/1.jpg",
-  },
-  {
-    id: 6,
-    name: "Mobile App",
-    text: [
-      "Tokyo is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
-      "In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.",
-      "That’s why more companies are not only reevaluating their website’s design but also partnering with Tokyo, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
+      "A mobile developer specializes in creating software applications that run on mobile devices, such as smartphones and tablets. These professionals design, develop, and maintain applications for various mobile operating systems, primarily iOS (Apple) and Android (Google). Here is a comprehensive overview of what it means to be a mobile developer.",
+      "I am still right now using hybrid framework to development mobile apps. and i am using Framework Flutter and React Native",
     ],
     image: "assets/img/news/2.jpg",
   },

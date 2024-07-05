@@ -12,7 +12,6 @@ const Contact = () => {
               <SectionTitle pageName={"Contact"} title={"Get in Touch"} />
             </div>
           </div>
-          <Map />
           <ContactForm />
         </div>
       </div>

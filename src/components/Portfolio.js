@@ -8,72 +8,69 @@ const detailData = [
   {
     id: 1,
     thumbnail: "assets/img/portfolio/7.jpg",
-    title: "Selena Gomez",
+    title: "Hacktiv8",
     text: [
-      "We live in a world where we need to move quickly and iterate on our ideas as flexibly as possible. Building mockups strikes the ideal balance between true-life representation of the end product and ease of modification.",
-      "Mockups are useful both for the creative phase of the project - for instance when you're trying to figure out your user flows or the proper visual hierarchy - and the production phase when they will represent the target product. Making mockups a part of your creative and development process allows you to quickly and easily ideate.",
+      "Started in 2018, and I am already graduating from my coding boot camp which takes 4 months. I am working at Hacktiv8 as a full-stack programmer. this is my list of creating applications for hacktiv8:",
+      "1. Create a website",
+      "for branding and a backend for student form the website is built from HTML and CSS manually. Backend the system using Zapier in a fast way. for student register and put the data on Airtable.",
+      "2. Create Hiring Portal",
+      "the website using Nodejs, ExpressJs and ORM Sequelize, the system design Monolith. A hiring Portal system for a company wanna find a programmer as graduated from school, and the team company can see the score, and see the project he/she built. the system deployed to Heroku"
     ],
-    client: "Alvaro Morata",
-    date: "October 22, 2022",
-    category: "Detail",
-    share: [
-      {
-        id: 1,
-        iconName: "icon-facebook-squared",
-        link: "https://www.facebook.com/",
-      },
-      {
-        id: 2,
-        iconName: "icon-twitter-squared",
-        link: "https://twitter.com/",
-      },
-      {
-        id: 3,
-        iconName: "icon-behance-squared",
-        link: "https://www.behance.net/",
-      },
-      {
-        id: 4,
-        iconName: "icon-linkedin-squared",
-        link: "https://www.linkedin.com/",
-      },
-    ],
+    client: "Hacktiv8",
+    date: "2018",
+    category: "Fulltime Jobs",
     bigImage: "assets/img/portfolio/1.jpg",
     images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
   },
   {
     id: 2,
     thumbnail: "assets/img/portfolio/8.jpg",
-    title: "Ave Simone",
+    title: "Agtran",
     text: [
-      "We live in a world where we need to move quickly and iterate on our ideas as flexibly as possible. Building mockups strikes the ideal balance between true-life representation of the end product and ease of modification.",
-      "Mockups are useful both for the creative phase of the project - for instance when you're trying to figure out your user flows or the proper visual hierarchy - and the production phase when they will represent the target product. Making mockups a part of your creative and development process allows you to quickly and easily ideate.",
+      "the business flow is booking rental cars. the company from Malaysia. At the start, I am doing Backend Engineer:",
+      "- Framework: Nodejs ( Typescript ) + ExpressJs, ",
+      "- ORM: Typeorm.",
+      "- Server deployment: Heroku.com",
+      "- Memory Storage: Redis",
     ],
-    client: "Alvaro Morata",
-    date: "October 22, 2022",
-    category: "Detail",
-    share: [
-      {
-        id: 1,
-        iconName: "icon-facebook-squared",
-        link: "https://www.facebook.com/",
-      },
-      {
-        id: 2,
-        iconName: "icon-twitter-squared",
-        link: "https://twitter.com/",
-      },
-      {
-        id: 3,
-        iconName: "icon-behance-squared",
-        link: "https://www.behance.net/",
-      },
-      {
-        id: 4,
-        iconName: "icon-linkedin-squared",
-        link: "https://www.linkedin.com/",
-      },
+    client: "Agtran",
+    date: "2020",
+    category: "Freelance",
+    bigImage: "assets/img/portfolio/1.jpg",
+    images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
+  },{
+    id: 3,
+    thumbnail: "assets/img/portfolio/kapok-fiber/tumbnail.png",
+    title: "Website Kapokfiber.id",
+    text: [
+      "Creating website for Business Kapokfiber, working with team:",
+      "- Framework: Nextjs+tailwind",
+      "- Server deployment: Vercel",
     ],
+    client: "David",
+    date: "2021",
+    category: "Freelance",
+    bigImage: "assets/img/portfolio/1.jpg",
+    images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
+  },
+  {
+    id: 4,
+    thumbnail: "assets/img/portfolio/8.jpg",
+    title: "PT Sinar Deli",
+    text: [
+      "the company ran many projects for the first time I joined the company. I should build a system of Flight Ticketing, Hotel, and Bus for the Indonesian government. my role on this project is SPV IT, so I build a team with Agile project build. so I have 5 people without me. the system will be Mobile apps and a website for booking tickets. following the system specification",
+      "- UI UX: Figma",
+      "- Backend: Golang,",
+      "- Frontend: Next js",
+      "- Background Job: Nodejs + Redis + Bull Js",
+      "- Server: Digital Ocean, and AWS.",
+      "- Mobile Apps: React Native.",
+      "- Server deployment: Heroku.com",
+      "- Memory Storage: Redis",
+    ],
+    client: "PT Sinar Deli",
+    date: "2021",
+    category: "Fulltime Jobs",
     bigImage: "assets/img/portfolio/1.jpg",
     images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
   },
@@ -116,173 +113,23 @@ const Portfolio = () => {
                 pageName={"Portfolio"}
                 title={"Creative Portfolio"}
               />
-              <div className="portfolio_filter">
-                <ul className="list-none">
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      href="#"
-                      className="current text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      onClick={handleFilterKeyChange("*")}
-                    >
-                      All
-                    </a>
-                  </li>
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("vimeo")}
-                    >
-                      Vimeo
-                    </a>
-                  </li>
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("youtube")}
-                    >
-                      Youtube
-                    </a>
-                  </li>
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("soundcloud")}
-                    >
-                      Soundcloud
-                    </a>
-                  </li>
-                  <li className="mr-[25px] inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("image")}
-                    >
-                      Image
-                    </a>
-                  </li>
-                  <li className="inline-block">
-                    <a
-                      className="text-[#767676] inline-block font-medium font-montserrat transition-all duration-300 hover:text-black"
-                      href="#"
-                      onClick={handleFilterKeyChange("detail")}
-                    >
-                      Detail
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <div className="list_wrapper w-full h-auto clear-both float-left">
             <ul className="portfolio_list gallery_zoom ml-[-40px] list-none">
-              <li className="vimeo mb-[40px] float-left w-1/3 pl-[40px] item__">
+              {detailData.map((item) => (
+                <li key={item.id} className="detail mb-[40px] float-left w-1/3 pl-[40px] item__">
                 <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
                   <div
                     className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Teresa Butler"
-                    data-category="Vimeo"
-                  >
-                    <a
-                      className="popup-vimeo"
-                      href="https://vimeo.com/337293658"
-                    >
-                      <img
-                        className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
-                        alt="image"
-                      />
-                      <div
-                        className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/5.jpg"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="youtube mb-[40px] float-left w-1/3 pl-[40px] item__">
-                <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
-                  <div
-                    className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Ashley Flores"
-                    data-category="Youtube"
-                  >
-                    <a
-                      className="popup-youtube"
-                      href="https://www.youtube.com/watch?v=7e90gBu4pas"
-                    >
-                      <img
-                        className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
-                        alt="image"
-                      />
-                      <div
-                        className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/6.jpg"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="soundcloud mb-[40px] float-left w-1/3 pl-[40px] item__">
-                <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
-                  <div
-                    className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Derek Smith"
-                    data-category="Soundcloud"
-                  >
-                    <a
-                      className="soundcloude_link mfp-iframe audio"
-                      href="https://w.soundcloud.com/player/?visual=true&url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F159967086&show_artwork=true&maxwidth=1020&maxheight=1000&auto_play=1"
-                    >
-                      <img
-                        className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
-                        alt="image"
-                      />
-                      <div
-                        className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/4.jpg"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="image mb-[40px] float-left w-1/3 pl-[40px] item__">
-                <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
-                  <div
-                    className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Gloria Jenkins"
-                    data-category="Image"
-                  >
-                    <a className="zoom" href="assets/img/portfolio/3.jpg">
-                      <img
-                        className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
-                        alt="image"
-                      />
-                      <div
-                        className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/3.jpg"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="detail mb-[40px] float-left w-1/3 pl-[40px] item__">
-                <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
-                  <div
-                    className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Selena Gomez"
-                    data-category="Detail"
+                    data-title={item.title}
+                    data-category={item.category}
                   >
                     <a
                       className="popup_info"
                       href="#"
                       onClick={() => {
-                        setPortfolioDetailsModal(detailData[0]);
+                        setPortfolioDetailsModal(item);
                         modalToggle(true);
                       }}
                     >
@@ -299,34 +146,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-              <li className="detail mb-[40px] float-left w-1/3 pl-[40px] item__">
-                <div className="inner w-full h-auto clear-both float-left overflow-hidden relative">
-                  <div
-                    className="entry tokyo_tm_portfolio_animation_wrap"
-                    data-title="Ave Simone"
-                    data-category="Detail"
-                  >
-                    <a
-                      className="popup_info"
-                      href="#"
-                      onClick={() => {
-                        setPortfolioDetailsModal(detailData[1]);
-                        modalToggle(true);
-                      }}
-                    >
-                      <img
-                        className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
-                        alt="image"
-                      />
-                      <div
-                        className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/8.jpg"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -1,5 +1,5 @@
 {
-  "name": "tokyo-react",
+  "name": "portofolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,10 +11,12 @@
   "dependencies": {
     "@next/font": "13.2.4",
     "emailjs-com": "^3.2.0",
+    "formbold-react": "^1.0.5",
     "isotope-layout": "^3.0.6",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.52.1",
     "react-player": "^2.12.0",
     "swiper": "^9.2.0"
   }

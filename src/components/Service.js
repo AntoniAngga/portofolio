@@ -18,9 +18,7 @@ const Service = () => {
           <ServiceItems />
         </div>
       </div>
-      <Partners />
       <FunFact />
-      <Pricing />
     </SectionContainer>
   );
 };

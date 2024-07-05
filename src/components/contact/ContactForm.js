@@ -24,7 +24,7 @@ const ContactForm = () => {
           "Q3pccdLZhU-mZT7tQ" // public api
         )
         .then(
-          (response) => {
+          () => {
             setError(false);
             clearError();
             setMailData({ name: "", email: "", message: "" });
