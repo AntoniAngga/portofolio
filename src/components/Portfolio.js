@@ -7,24 +7,7 @@ import SectionTitle from "./SectionTitle";
 const detailData = [
   {
     id: 1,
-    thumbnail: "assets/img/portfolio/7.jpg",
-    title: "Hacktiv8",
-    text: [
-      "Started in 2018, and I am already graduating from my coding boot camp which takes 4 months. I am working at Hacktiv8 as a full-stack programmer. this is my list of creating applications for hacktiv8:",
-      "1. Create a website",
-      "for branding and a backend for student form the website is built from HTML and CSS manually. Backend the system using Zapier in a fast way. for student register and put the data on Airtable.",
-      "2. Create Hiring Portal",
-      "the website using Nodejs, ExpressJs and ORM Sequelize, the system design Monolith. A hiring Portal system for a company wanna find a programmer as graduated from school, and the team company can see the score, and see the project he/she built. the system deployed to Heroku"
-    ],
-    client: "Hacktiv8",
-    date: "2018",
-    category: "Fulltime Jobs",
-    bigImage: "assets/img/portfolio/1.jpg",
-    images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
-  },
-  {
-    id: 2,
-    thumbnail: "assets/img/portfolio/8.jpg",
+    thumbnail: "assets/img/portfolio/agtran/tumbnail.jpg",
     title: "Agtran",
     text: [
       "the business flow is booking rental cars. the company from Malaysia. At the start, I am doing Backend Engineer:",
@@ -35,11 +18,11 @@ const detailData = [
     ],
     client: "Agtran",
     date: "2020",
-    category: "Freelance",
-    bigImage: "assets/img/portfolio/1.jpg",
-    images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
+    withImage:false,
+    category: "Backend Engineer",
+    bigImage: "/assets/img/portfolio/agtran/1.png",
   },{
-    id: 3,
+    id: 2,
     thumbnail: "assets/img/portfolio/kapok-fiber/tumbnail.png",
     title: "Website Kapokfiber.id",
     text: [
@@ -48,31 +31,11 @@ const detailData = [
       "- Server deployment: Vercel",
     ],
     client: "David",
+    withImage: false,
     date: "2021",
-    category: "Freelance",
-    bigImage: "assets/img/portfolio/1.jpg",
-    images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
-  },
-  {
-    id: 4,
-    thumbnail: "assets/img/portfolio/8.jpg",
-    title: "PT Sinar Deli",
-    text: [
-      "the company ran many projects for the first time I joined the company. I should build a system of Flight Ticketing, Hotel, and Bus for the Indonesian government. my role on this project is SPV IT, so I build a team with Agile project build. so I have 5 people without me. the system will be Mobile apps and a website for booking tickets. following the system specification",
-      "- UI UX: Figma",
-      "- Backend: Golang,",
-      "- Frontend: Next js",
-      "- Background Job: Nodejs + Redis + Bull Js",
-      "- Server: Digital Ocean, and AWS.",
-      "- Mobile Apps: React Native.",
-      "- Server deployment: Heroku.com",
-      "- Memory Storage: Redis",
-    ],
-    client: "PT Sinar Deli",
-    date: "2021",
-    category: "Fulltime Jobs",
-    bigImage: "assets/img/portfolio/1.jpg",
-    images: ["assets/img/portfolio/2.jpg", "assets/img/portfolio/3.jpg"],
+    category: "Project Manager",
+    bigImage: "assets/img/portfolio/kapok-fiber/1.png",
+    
   },
 ];
 const Portfolio = () => {
@@ -95,9 +58,9 @@ const Portfolio = () => {
         : isotope.current.arrange({ filter: `.${filterKey}` });
     }
   }, [filterKey]);
-  const handleFilterKeyChange = (key) => () => {
-    setFilterKey(key);
-  };
+  // const handleFilterKeyChange = (key) => () => {
+  //   setFilterKey(key);
+  // };
   useEffect(() => {
     tokyo.portfolioHover();
     tokyo.dataImage();
@@ -135,12 +98,12 @@ const Portfolio = () => {
                     >
                       <img
                         className="opacity-0 min-w-full"
-                        src="assets/img/thumbs/1-1.jpg"
+                        src={item.thumbnail}
                         alt="image"
                       />
                       <div
                         className="abs_image absolute inset-0 bg-no-repeat bg-cover bg-center transition-all duration-300"
-                        data-img-url="assets/img/portfolio/7.jpg"
+                        data-img-url={item.thumbnail}
                       />
                     </a>
                   </div>
