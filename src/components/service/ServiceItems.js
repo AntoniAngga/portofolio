@@ -10,7 +10,7 @@ const services = [
       "Frontend Development: \n\nVuejs, and React Native",
       "Backend Development: \n\nNodejs, Golang",
     ],
-    image: "assets/img/news/1.jpg",
+    image: "assets/img/news/full-stack-dev/1.jpg",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const services = [
       "A mobile developer specializes in creating software applications that run on mobile devices, such as smartphones and tablets. These professionals design, develop, and maintain applications for various mobile operating systems, primarily iOS (Apple) and Android (Google). Here is a comprehensive overview of what it means to be a mobile developer.",
       "I am still right now using hybrid framework to development mobile apps. and i am using Framework Flutter and React Native",
     ],
-    image: "assets/img/news/2.jpg",
+    image: "assets/img/news/full-stack-dev/1.jpg",
   },
 ];
 const ServiceItems = () => {

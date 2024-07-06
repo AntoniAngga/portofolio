@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Fragment } from "react";
 const Intro = () => {
   function getAge(dateString) {
@@ -15,7 +16,7 @@ const Intro = () => {
   return (
     <Fragment>
       <div className="top_author_image w-full h-auto clear-both float-left relative mb-[35px]">
-        <img className="min-w-full" src="assets/img/slider/1.jpg" alt="image" />
+        <Image src={"/assets/img/slider/1.jpg"} alt="about-image" height={1000} width={1000} />
       </div>
       <div className="about_title w-full h-auto clear-both float-left border-solid border-[#DFDFDF] border-b pb-[20px] mb-[30px]">
         <h3 className="text-[22px] font-bold">Antoni Angga</h3>
