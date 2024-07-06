@@ -1,40 +1,57 @@
-import emailjs from "emailjs-com";
+import axios from "axios";
+
 import { useState } from "react";
 const ContactForm = () => {
-  const [mailData, setMailData] = useState({
+  const [isSubmiting, setIsSubmiting] = useState(false);
+  const [inputs, setInputs] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const { name, email, message } = mailData;
+
   const [error, setError] = useState(null);
-  const onChange = (e) =>
-    setMailData({ ...mailData, [e.target.name]: e.target.value });
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (name.length === 0 || email.length === 0 || message.length === 0) {
+
+  const handleOnChange = (event) => {
+    event.persist();
+    setInputs((prev) => ({
+      ...prev,
+      [event.target.id]: event.target.value,
+    }));
+  };
+
+  const handleOnSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmiting(true);
+    if (inputs.name.length === 0 || inputs.subjectlength === 0 || inputs.message.length === 0) {
       setError(true);
       clearError();
     } else {
-      emailjs
-        .send(
-          "service_seruhwu", // service id
-          "template_21aw58z", // template id
-          mailData,
-          "Q3pccdLZhU-mZT7tQ" // public api
-        )
-        .then(
-          () => {
-            setError(false);
-            clearError();
-            setMailData({ name: "", email: "", message: "" });
-          },
-          (err) => {
-            console.log(err.text);
-          }
-        );
+      const newInput = {
+        name: inputs.name,
+        email: inputs.subject,
+        message: inputs.message,
+      };
+  
+      try {
+        await axios({
+          method: "POST",
+          url: `https://formbold.com/s/${process.env.NEXT_PUBLIC_FORM_TOKEN}`,
+          data: newInput,
+        });
+        setInputs({
+          name: "",
+          email: "",
+          message: "",
+        });
+        setError(false);
+        clearError();
+        setMailData({ name: "", email: "", message: "" });
+      } catch (err) {
+        console.log(err.text);
+      }
+
     }
-  };
+  }
   const clearError = () => {
     setTimeout(() => {
       setError(null);
@@ -46,7 +63,7 @@ const ContactForm = () => {
       <form
         className="contact_form"
         id="contact_form"
-        onSubmit={(e) => onSubmit(e)}
+        onSubmit={handleOnSubmit}
       >
         <div
           className={error ? "empty_notice" : "returnmessage"}
@@ -63,8 +80,8 @@ const ContactForm = () => {
             <li className="w-full mb-[30px] float-left">
               <input
                 name="name"
-                onChange={(e) => onChange(e)}
-                value={name}
+                onChange={handleOnChange}
+                value={inputs.name}
                 id="name"
                 type="text"
                 placeholder="Name"
@@ -73,8 +90,8 @@ const ContactForm = () => {
             <li className="w-full mb-[30px] float-left">
               <input
                 name="email"
-                onChange={(e) => onChange(e)}
-                value={email}
+                onChange={handleOnChange}
+                value={inputs.email}
                 id="email"
                 type="email"
                 placeholder="Email"
@@ -85,18 +102,19 @@ const ContactForm = () => {
         <div className="last">
           <textarea
             name="message"
-            onChange={(e) => onChange(e)}
-            value={message}
+            onChange={handleOnChange}
+            value={inputs.message}
             id="message"
             placeholder="Message"
           />
         </div>
         <div className="tokyo_tm_button" data-position="left">
-          <button type="submit">Send Message</button>
+          <button type="submit" disabled={isSubmiting? true: false}>Send Message</button>
         </div>
         {/* If you want to change mail address to yours, please open modal.php and go to line 4 */}
       </form>
     </div>
   );
 };
+
 export default ContactForm;
