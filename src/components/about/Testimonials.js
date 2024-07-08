@@ -1,27 +1,27 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sliderProps } from "../../sliderProps";
 const testimonialData = [
-  {
-    id: 1,
-    text: "These people really know what they are doing! Great customer support availability and supperb kindness.",
-    authorImage: "assets/img/testimonials/1.jpg",
-    authorName: "Alexander Walker",
-    authorDesignation: "Graphic Designer",
-  },
-  {
-    id: 2,
-    text: "These people really know what they are doing! Great customer support availability and supperb kindness.",
-    authorImage: "assets/img/testimonials/2.jpg",
-    authorName: "Isabelle Smith",
-    authorDesignation: "Content Manager",
-  },
-  {
-    id: 3,
-    text: "These people really know what they are doing! Great customer support availability and supperb kindness.",
-    authorImage: "assets/img/testimonials/3.jpg",
-    authorName: "Baraka Clinton",
-    authorDesignation: "English Teacher",
-  },
+  // {
+  //   id: 1,
+  //   text: "These people really know what they are doing! Great customer support availability and supperb kindness.",
+  //   authorImage: "assets/img/testimonials/1.jpg",
+  //   authorName: "Alexander Walker",
+  //   authorDesignation: "Graphic Designer",
+  // },
+  // {
+  //   id: 2,
+  //   text: "These people really know what they are doing! Great customer support availability and supperb kindness.",
+  //   authorImage: "assets/img/testimonials/2.jpg",
+  //   authorName: "Isabelle Smith",
+  //   authorDesignation: "Content Manager",
+  // },
+  // {
+  //   id: 3,
+  //   text: "These people really know what they are doing! Great customer support availability and supperb kindness.",
+  //   authorImage: "assets/img/testimonials/3.jpg",
+  //   authorName: "Baraka Clinton",
+  //   authorDesignation: "English Teacher",
+  // },
 ];
 const Testimonials = () => {
   return (
@@ -61,6 +61,7 @@ const Testimonials = () => {
                 </div>
               </SwiperSlide>
             ))}
+            <h4>On Going to asking the project owner for testimonials</h4>
           </Swiper>
         </div>
       </div>
